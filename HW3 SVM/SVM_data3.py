@@ -6,7 +6,7 @@ from scipy.io import loadmat
 from sklearn import svm
 
 
-raw_data = loadmat('F:/MachineLearning/MachineLearning_HW_CQUT-master/HW3 SVM/data3.mat')
+raw_data = loadmat('F:\MachineLearning\MachineLearning_HW_CQUT\HW3 SVM\data3.mat')
 
 data_train = pd.DataFrame(raw_data['X'], columns=['X1', 'X2'])
 data_train['y'] = raw_data['y']

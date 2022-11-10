@@ -14,7 +14,7 @@ sigma = 2
 
 gaussian_kernel(x1, x2, sigma)
 
-raw_data = loadmat('F:/MachineLearning/MachineLearning_HW_CQUT-master/HW3 SVM/data2.mat')
+raw_data = loadmat('F:\MachineLearning\MachineLearning_HW_CQUT\HW3 SVM\data2.mat')
 
 data = pd.DataFrame(raw_data['X'], columns=['X1', 'X2'])
 data['y'] = raw_data['y']
