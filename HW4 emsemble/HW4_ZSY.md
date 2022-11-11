@@ -38,27 +38,27 @@ X_train,X_test,y_train,y_test=train_test_split(X,y,random_state=1,train_size=0.7
 #### 1.3 分析（20）
 
 - 可视化决策边界，并输出验证集准确率
-  
-  
-  
-  ![](image/emsemble50.png)
-  
-  ```python
-  y_pred = (model.predict(X_test).reshape(-1, 1))
-  acc = np.sum(y_pred==y_test)/y_test.shape[0]
-  print('val_acc:',acc)
-  ```
-  
-  ![](image/emsemble_val_acc.png)
-- 基于实验，分析不同的基分类器和基分类器数量对于模型性能的影响
+
+<img title="" src="image/emsemble50.png" alt="" data-align="center">
+
+```python
+y_pred = (model.predict(X_test).reshape(-1, 1))
+acc = np.sum(y_pred==y_test)/y_test.shape[0]
+print('val_acc:',acc)
+```
+
+![](image/emsemble_val_acc.png)
+
+* 基于实验，分析不同的基分类器和基分类器数量对于模型性能的影响
   * base_estimator：none
   * n_estimators: 5
-    
-  * ![](image/emsemble5.png)
-  * base_estimator：none
+
+<img title="" src="image/emsemble5.png" alt="" data-align="center">
+
+* * base_estimator：none
   * n_estimators: 100
-    
-  * ![](image/emsemble100.png)
+
+<img src="image/emsemble100.png" title="" alt="" data-align="center">
 
 ### 2 随机森林（50）
 
@@ -168,13 +168,14 @@ X, y = load_iris(return_X_y=True)
 X_train,X_test,y_train,y_test=train_test_split(X,y,random_state=42,train_size=0.7,test_size=0.3
 ```
 
-![](\image/Iris分布.png)
+<img src="file:///F:/MachineLearning/MachineLearning_HW_CQUT/HW4%20emsemble/image/Iris.png" title="" alt="" data-align="center">
 
 #### 3.2 模型训练
 
 * 使用sklearn工具包，调用ensemble.AdaBoostClassifier接口对模型进行训练。
   
   * base_estimator：
+  
   * n_estimators: 100
     
     ```python
@@ -187,8 +188,11 @@ X_train,X_test,y_train,y_test=train_test_split(X,y,random_state=42,train_size=0.
 * 使用sklearn工具包，调用ensemble.RandomForestClassifier接口对模型进行训练。
   
   * n_estimators：100
+  
   * criterion：gini
+  
   * max_depth：None
+  
   * min_samples_split: 2
     
     ```python
@@ -200,8 +204,11 @@ X_train,X_test,y_train,y_test=train_test_split(X,y,random_state=42,train_size=0.
     # 对模型进行训练
     model2.fit(X_train, y_train)
     ```
-    
-    #### 3.3 分析
+
+#### 3.3 分析
+
 - 输出验证集准确率
-  ![](image/2022-11-09-15-45-53.png)
+  
+  <img title="" src="image/2022-11-09-15-45-53.png" alt="" data-align="inline" width="504">
+  
   ![](image/2022-11-09-15-51-00.png)
